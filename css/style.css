@@ -709,6 +709,7 @@ h2 {
 }
 .modal-form-message {
   margin-bottom: 28px;
+  resize: none;
 }
 
 .modal-form-input-wrapper {
