@@ -450,22 +450,29 @@
         <div class="modal-form-input-wrapper">
           <input type="text" name="user-name" id="user-modal-name" class="modal-form-input" placeholder=" " required/>
           <label for=user-modal-name" class="modal-form-label">Имя</label>
-          <svg width="18" height="18">
+          <svg width="12" height="12" class="modal-svg">
             <use href="./img/sprite.svg#name"></use>
           </svg>
         </div>
         <div class="modal-form-input-wrapper">
           <input type="tel" name="user-tel"  id="user-modal-tel"  class="modal-form-input" placeholder=" " required/>
           <label for="user-modal-tel" class="modal-form-label">Телефон</label>
+          <svg width="13" height="13" class="modal-svg">
+            <use href="./img/sprite.svg#tel"></use>
+          </svg>
         </div>
         <div class="modal-form-input-wrapper">
           <input type="email" name="user-email" id="user-modal-email" class="modal-form-input" placeholder=" " required/>
           <label for="user-modal-email" class="modal-form-label">Почта</label>
+          <svg width="15" height="12" class="modal-svg">
+            <use href="./img/sprite.svg#email"></use>
+          </svg>
         </div>
 
         <textarea name="user-message" class="modal-form-message" placeholder="Комментарий"></textarea>
         <label class="modal-form-option-lable">
           <input type="checkbox" name="policy" value="accept-policy" class="modal-form-checkbox"/>
+          <span class="icon"></span>
           <span class="modal-form-option-span">Соглашаюсь с рассылкой и принимаю<a href="#"> Условия договора</a></span >
         </label>
         <button type="submite" class="modal-form-btn">Отправить</button>
