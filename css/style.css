@@ -692,13 +692,16 @@ h2 {
   width: 30px;
   height: 30px;
   left: 490px;
-  top: 8px;
-  right: 8px;
+
   bottom: 543px;
   box-sizing: border-box;
   background: #ffffff;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white-color);
 }
 .modal-close-btn:hover svg use {
   fill: var(--blue-color);
@@ -712,7 +715,6 @@ h2 {
   margin-bottom: 30px;
 }
 .modal-form-message {
-  margin-bottom: 28px;
   resize: none;
 }
 
@@ -729,6 +731,10 @@ h2 {
   transition: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
   padding-left: 42px;
+}
+.modal-form-label-message {
+  top: 0;
+  transform: translateY(12px);
 }
 .modal-form-message {
   height: 120px;
@@ -773,6 +779,14 @@ h2 {
 .modal-form-input:focus + .modal-form-label,
 .modal-form-input:not(:placeholder-shown) + .modal-form-label {
   transform: translateY(-40px);
+  color: var(--blue-color);
+  font-size: 12px;
+  line-height: 14px;
+  padding-left: 12px;
+}
+.modal-form-message:focus + .modal-form-label,
+.modal-form-message:not(:placeholder-shown) + .modal-form-label-message {
+  transform: translateY(-20px);
   color: var(--blue-color);
   font-size: 12px;
   line-height: 14px;
@@ -884,7 +898,8 @@ h2 {
   color: rgba(255, 255, 255, 0.6);
 }
 .subscribe-input:focus + label,
-.subscribe-input:not(:placeholder-shown) + label {
+.subscribe-input:not(:placeholder-shown) + label,
+.modal-form-message:focus::placeholder {
   transform: translateY(-45px);
   color: var(--white-color);
   font-size: 12px;
@@ -899,4 +914,12 @@ h2 {
 }
 .subscribe-form .blue-btn svg {
   margin-left: 10px;
+}
+.modal-form-message:focus,
+.modal-form-message:not(:placeholder-shown) {
+  outline: none;
+  border-bottom-color: var(--blue-color);
+}
+.modal-form-message:focus::placeholder {
+  color: var(--blue-color);
 }

@@ -477,8 +477,11 @@
             <use href="./img/sprite.svg#email"></use>
           </svg>
         </div>
-
-        <textarea name="user-message" class="modal-form-message" placeholder="Комментарий"></textarea>
+        <div class="modal-form-input-wrapper">
+        <textarea name="user-message" id="user-message" class="modal-form-message" placeholder=" "></textarea>
+        <label for="user-message" class="modal-form-label modal-form-label-message">Коментарий</label>
+        </div>
+        
         <label class="modal-form-option-lable">
           <input type="checkbox" name="policy" value="accept-policy" class="modal-form-checkbox"/>
           <span class="icon"></span>
